@@ -1,4 +1,4 @@
-// stm32 LED blinking code
+// stm32 LED blinking code forpractice
 
 #include <stdint.h>
 
