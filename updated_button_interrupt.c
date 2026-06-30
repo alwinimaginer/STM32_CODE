@@ -60,11 +60,12 @@ int main(void)
     GPIOA->CRH &= ~(0xF << 0);
     // 0,1 - 00: Input mode (reset state)
     // 2,3 - 10: Input with pull-up
-    GPIOA->CRH |=  (0x8 << 0);
-
-    // Enable internal 1-pull-up/ 0-pull-down
+	// Enable internal 1-pull-up/ 0-pull-down
     // button released - PA8 = HIGH(1)
     // button pressed  - PA8 = LOW(0)
+    GPIOA->CRH |=  (0x8 << 0);
+
+ 
     GPIOA->ODR |= BUTTON_PIN;
 
     while(1)
